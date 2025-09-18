@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6591490120852334786
+--- !u!114 &-2144294080993157825
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -50,9 +50,23 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Float: 6
+    - _Float_1: 3
+    - _Float_2: 2
+    - _Float_3: 5
+    - _Float_4: 0.75
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _density: 17.02
+    - _noise: 0
+    - _power: 1.67
+    - _speed: 9.6
+    - _speedondas: 3.39
     m_Colors:
-    - _Color: {r: 1, g: 0.07924521, b: 0.07924521, a: 0}
-    - _redColor: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 0.16037738, g: 0.12164473, b: 0.12734254, a: 0}
+    - _Color_1: {r: 0.1249555, g: 0.4155509, b: 0.5660378, a: 0}
+    - _Vector2: {r: 0.25, g: 0.25, b: 0, a: 0}
+    - _colorlast: {r: 1, g: 0, b: 0, a: 0}
+    - _ondas: {r: 0.1249555, g: 0.4155509, b: 0.5660378, a: 0}
+    - _tiling: {r: 0.1, g: 0.06, b: 0, a: 0}
   m_BuildTextureStacks: []
