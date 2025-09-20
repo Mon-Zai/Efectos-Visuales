@@ -718,7 +718,7 @@
     "m_AlphaClip": false,
     "m_CastShadows": true,
     "m_ReceiveShadows": true,
-    "m_SupportsLODCrossFade": false,
+    "m_SupportsLODCrossFade": true,
     "m_CustomEditorGUI": "",
     "m_SupportVFX": false
 }
@@ -2201,10 +2201,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -676.8001098632813,
-            "y": -660.800048828125,
-            "width": 208.00003051757813,
-            "height": 325.6000061035156
+            "x": -675.2000122070313,
+            "y": -660.7999877929688,
+            "width": 208.00009155273438,
+            "height": 325.59991455078127
         }
     },
     "m_Slots": [
@@ -3116,10 +3116,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1883.199951171875,
-            "y": -683.2000732421875,
+            "x": -1747.199951171875,
+            "y": -676.0,
             "width": 208.0,
-            "height": 311.2000427246094
+            "height": 311.1999816894531
         }
     },
     "m_Slots": [
