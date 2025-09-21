@@ -61,12 +61,12 @@ Material:
     - _noise: 0
     - _power: 1.67
     - _speed: 9.6
-    - _speedondas: 3.39
+    - _speedondas: 36.66
     m_Colors:
     - _Color: {r: 0.16037738, g: 0.12164473, b: 0.12734254, a: 0}
     - _Color_1: {r: 0.1249555, g: 0.4155509, b: 0.5660378, a: 0}
     - _Vector2: {r: 0.25, g: 0.25, b: 0, a: 0}
-    - _colorlast: {r: 1, g: 0, b: 0, a: 0}
+    - _colorlast: {r: 0.6037736, g: 0.11050192, b: 0.11050192, a: 1}
     - _ondas: {r: 0.1249555, g: 0.4155509, b: 0.5660378, a: 0}
-    - _tiling: {r: 0.1, g: 0.06, b: 0, a: 0}
+    - _tiling: {r: 0.1, g: 201.3, b: 0, a: 0}
   m_BuildTextureStacks: []
