@@ -23,7 +23,7 @@ Material:
   m_Name: Blood
   m_Shader: {fileID: -6465566751694194690, guid: 54163a7f96f7578498d4e6325f1ebbf5, type: 3}
   m_Parent: {fileID: -876546973899608171, guid: 54163a7f96f7578498d4e6325f1ebbf5, type: 3}
-  m_ModifiedSerializedProperties: 2
+  m_ModifiedSerializedProperties: 14
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _EMISSION
@@ -37,12 +37,19 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Ripple:
+        m_Texture: {fileID: 2800000, guid: a3cfe21ad2bb54b4b8e509bf79099e1d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Water:
-        m_Texture: {fileID: 2800000, guid: 9a000661f7d069e4e81e64fe15b1c985, type: 3}
+        m_Texture: {fileID: 2800000, guid: a3cfe21ad2bb54b4b8e509bf79099e1d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Flow: 3.6
     - _QueueControl: 0
-    m_Colors: []
+    m_Colors:
+    - _MainTiling: {r: 0.04, g: 0, b: 0, a: 0}
+    - _RippleTiling: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
