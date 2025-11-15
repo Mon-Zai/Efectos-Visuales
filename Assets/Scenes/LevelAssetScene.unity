@@ -7463,7 +7463,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 1
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -7519,7 +7519,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -8083,8 +8083,8 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
+    m_Position: {x: 0.41771898, y: -0.000055483295, z: 0.000005400567}
+    m_Rotation: {x: -0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -8164,7 +8164,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 2.2009804
       mode: 0
       spread: 0
       speed:
@@ -12178,8 +12178,8 @@ Transform:
   m_GameObject: {fileID: 458578127}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -23.020994, y: 19.479246, z: 142.639}
-  m_LocalScale: {x: 0.12743181, y: 0.12743181, z: 0.12743181}
+  m_LocalPosition: {x: -23.020994, y: 19.419, z: 142.538}
+  m_LocalScale: {x: 0.12743181, y: 0.12743181, z: 0.17041455}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
