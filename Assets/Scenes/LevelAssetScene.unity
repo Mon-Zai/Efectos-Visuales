@@ -7793,6 +7793,8 @@ MonoBehaviour:
   _leftHand: {fileID: 1457075561}
   _player: {fileID: 1965717325}
   _finalEnemy: {fileID: 6384629801974890414}
+  fullscreenMaterial: {fileID: 2100000, guid: 6bccddc92935fc74fa7d97d4035c4e1f, type: 2}
+  activationDistance: 5
 --- !u!65 &522280514
 BoxCollider:
   m_ObjectHideFlags: 0

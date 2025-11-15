@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,101 +6,105 @@ public class NoLightZoneLock : MonoBehaviour
 {
     [SerializeField] private GameObject _canvasMessage = null;
 
-    //[SerializeField] private Flashlight _flashLight;
     [SerializeField] private GameObject _leftHand;
-
     [SerializeField] private Transform _player;
 
     [SerializeField] private GameObject _finalEnemy;
+
+    // -------------------------------
+    // 🔥 CONTROL DEL SHADER FULLSCREEN
+    // -------------------------------
+    [Header("Fullscreen Shader")]
+    public Material fullscreenMaterial;   // Material de tu RenderFeature
+    public float activationDistance = 5f; // A qué distancia empieza el efecto
+
+    private float shaderIntensity = 0f;
+    // -------------------------------
+
 
     #region Collision
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.layer == 7)
         {
-            Debug.Log("Ahh... Mi cabeza... No puedo pasar por aqu�.");
-
-            Flashlight flashlight = _leftHand.GetComponentInChildren<Flashlight>(); 
-
-            if (flashlight != null)
+            Flashlight flashlight = _leftHand.GetComponentInChildren<Flashlight>();
+            if (flashlight != null && flashlight.flashLightPicked)
             {
-                Debug.Log("1");
-                if (flashlight.flashLightPicked)
-                {
-                    Debug.Log("2");
-                    _canvasMessage.SetActive(false);
-                    DestroyBarrier();
-                }
-
+               // _canvasMessage.SetActive(false);
+                DestroyBarrier();
             }
             else
             {
-                _canvasMessage.SetActive(true);
+               // _canvasMessage.SetActive(true);
             }
         }
-
-        
     }
 
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.layer == 7)
         {
-            _canvasMessage.SetActive(false);
+           // _canvasMessage.SetActive(false);
         }
     }
     #endregion
-    #region Trigger
 
+
+    #region Trigger + Shader
     private void Update()
     {
-        if(Vector3.Distance(_player.position, transform.position) < 2)
+        // -------------------------------
+        // 🔥 CONTROL DE EFECTO POR DISTANCIA
+        // -------------------------------
+        float distance = Vector3.Distance(_player.position, transform.position);
+
+        
+        float targetIntensity = Mathf.Clamp01(1 - (distance / activationDistance));
+
+      
+        shaderIntensity = Mathf.Lerp(shaderIntensity, targetIntensity, Time.deltaTime * 5f);
+
+       
+        if (fullscreenMaterial != null)
+            fullscreenMaterial.SetFloat("_fxIntensity", shaderIntensity);
+        
+
+
+       
+        if (distance < 2)
         {
             NewFlashLight flashlight = _leftHand.GetComponentInChildren<NewFlashLight>();
 
-            if (flashlight != null)
+            if (flashlight != null && flashlight.flashLightPicked)
             {
-                Debug.Log("1");
-                if (flashlight.flashLightPicked)
-                {
-                    Debug.Log("2");
-                    _canvasMessage.SetActive(false);
-                    DestroyBarrier();
-                }
-
+                //_canvasMessage.SetActive(false);
+                DestroyBarrier();
             }
             else
             {
-                _canvasMessage.SetActive(true);
+                //_canvasMessage.SetActive(true);
             }
         }
         else
         {
-            _canvasMessage.SetActive(false);
+            //_canvasMessage.SetActive(false);
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 7)
         {
-            Debug.Log("Ahh... Mi cabeza... No puedo pasar por aqu�.");
-
             Flashlight flashlight = _leftHand.GetComponentInChildren<Flashlight>();
 
-            if (flashlight != null)
+            if (flashlight != null && flashlight.flashLightPicked)
             {
-                Debug.Log("1");
-                if (flashlight.flashLightPicked)
-                {
-                    Debug.Log("2");
-                    _canvasMessage.SetActive(false);
-                    DestroyBarrier();
-                }
-
+               // _canvasMessage.SetActive(false);
+                DestroyBarrier();
             }
             else
             {
-                _canvasMessage.SetActive(true);
+                //_canvasMessage.SetActive(true);
             }
         }
     }
@@ -109,13 +113,17 @@ public class NoLightZoneLock : MonoBehaviour
     {
         if (other.gameObject.layer == 7)
         {
-            _canvasMessage.SetActive(false);
+            //_canvasMessage.SetActive(false);
         }
     }
     #endregion
-    public void DestroyBarrier() //LLAMAR A ESTO CUANDO YA TENGA LA LINTERNA Y PUEDA PASAR
+
+
+    public void DestroyBarrier()
     {
-        if(!_finalEnemy.activeSelf)_finalEnemy.SetActive(true);
+        if (!_finalEnemy.activeSelf)
+            _finalEnemy.SetActive(true);
+
         _canvasMessage.SetActive(false);
         Destroy(gameObject);
     }
