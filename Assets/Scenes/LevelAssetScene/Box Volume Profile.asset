@@ -46,6 +46,34 @@ MonoBehaviour:
   bladeRotation:
     m_OverrideState: 0
     m_Value: 0
+--- !u!114 &-6313974020949004324
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e1dc532bcb41949b58bc4f2abfbb7e, type: 3}
+  m_Name: LensDistortion
+  m_EditorClassIdentifier: 
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.2
+  xMultiplier:
+    m_OverrideState: 1
+    m_Value: 1
+  yMultiplier:
+    m_OverrideState: 1
+    m_Value: 1
+  center:
+    m_OverrideState: 1
+    m_Value: {x: 0.5, y: 0.5}
+  scale:
+    m_OverrideState: 1
+    m_Value: 1
 --- !u!114 &-1173573334226518748
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -90,6 +118,7 @@ MonoBehaviour:
   - {fileID: -1173573334226518748}
   - {fileID: -7946236409784804541}
   - {fileID: 2339546153460720184}
+  - {fileID: -6313974020949004324}
 --- !u!114 &2339546153460720184
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -108,13 +137,13 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 1.1
+    m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 3.5
+    m_Value: 8
   scatter:
     m_OverrideState: 1
-    m_Value: 0.75
+    m_Value: 0.4
   clamp:
     m_OverrideState: 0
     m_Value: 65472

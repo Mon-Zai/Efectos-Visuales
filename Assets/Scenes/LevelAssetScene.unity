@@ -1054,6 +1054,7 @@ GameObject:
   - component: {fileID: 242186707}
   - component: {fileID: 242186706}
   - component: {fileID: 242186709}
+  - component: {fileID: 242186710}
   m_Layer: 0
   m_Name: Box Volume
   m_TagString: Untagged
@@ -1126,6 +1127,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ef391544cc96d4eaf86b6e9c3e7032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volume: {fileID: 242186706}
+--- !u!114 &242186710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242186705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54d929dd8cbd614a9f29fe3de9890cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: {fileID: 242186706}
 --- !u!1 &263563372
 GameObject:
   m_ObjectHideFlags: 0
