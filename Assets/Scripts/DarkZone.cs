@@ -27,7 +27,7 @@ public class DarkZone : MonoBehaviour
 
         if(bounds.Contains(_playerTransform.position))
         {
-            _darkZoneShader.SetFloat("_ApplyEffect", 1);
+            
         }
         else
         {

@@ -57,7 +57,8 @@ MonoBehaviour:
   - {fileID: 7207664107882644049}
   - {fileID: 7053489142311276225}
   - {fileID: 3477372626700954546}
-  m_RendererFeatureMap: a930838b3cedea6348640b9908a906b5647d41024ad33930e23483fda14702915182ad7a51c40664c1ce89020107e361b26b2de6fa1b4230
+  - {fileID: 8802977259083981796}
+  m_RendererFeatureMap: a930838b3cedea6348640b9908a906b5647d41024ad33930e23483fda14702915182ad7a51c40664c1ce89020107e361b26b2de6fa1b4230e4e38a4d2d752a7a
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -230,4 +231,21 @@ MonoBehaviour:
   passMaterial: {fileID: 2100000, guid: 11662894a707302479fa2c2f76867d0d, type: 2}
   injectionPoint: 600
   requirements: -1
+  passIndex: 0
+--- !u!114 &8802977259083981796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
+  m_Name: colorchanger
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  passMaterial: {fileID: 2100000, guid: 790d244440fe7d246adff6eb7943ca58, type: 2}
+  injectionPoint: 600
+  requirements: 4
   passIndex: 0
