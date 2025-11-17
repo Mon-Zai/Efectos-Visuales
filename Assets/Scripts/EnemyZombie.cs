@@ -17,6 +17,13 @@ public class EnemyZombie : MonoBehaviour
     [SerializeField] private float _rayLenght = 1f;
     [SerializeField] private LayerMask _mask;
 
+    public Material mat;
+    public Color colorDaño = Color.red;
+    public string param = "_color2";
+
+
+ 
+
     [SerializeField] private Transform _transform;
 
     private bool _canCancellAttack = true;
@@ -29,6 +36,9 @@ public class EnemyZombie : MonoBehaviour
 
     [SerializeField] private ParticleSystem _bloodParticles;
 
+
+
+
     public int TakeDamage(int damage)
     {
         _life -= damage;
@@ -39,6 +49,7 @@ public class EnemyZombie : MonoBehaviour
             _finalDoor.Open();
             gameObject.SetActive(false);
         }
+       AplicarDaño();
         return _life;
     }
 
@@ -126,5 +137,28 @@ public class EnemyZombie : MonoBehaviour
         _anim.SetBool("CanAttack", false);
         _canCancellAttack = true;
     }
-    
+
+
+    public void AplicarDaño()
+    {
+        if(_life > 0)
+            StartCoroutine(FlashDaño());
+    }
+
+    IEnumerator FlashDaño()
+    {
+        Color original = mat.GetColor(param);
+
+        mat.SetColor(param, colorDaño);
+
+        yield return new WaitForSeconds(1f);
+
+        mat.SetColor(param, original);
+    }
+
 }
+
+
+
+
+

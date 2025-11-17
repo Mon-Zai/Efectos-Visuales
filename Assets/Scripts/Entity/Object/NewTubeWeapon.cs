@@ -23,6 +23,8 @@ public class NewTubeWeapon : MonoBehaviour
 
         _axeModel.localPosition = new Vector3(0.04f, 0.48f, 0.05f);
         _axeModel.localEulerAngles = new Vector3(-101.294f, 134.7f, -267.85f);
+        transform.GetChild(0).gameObject.layer =
+        LayerMask.NameToLayer("Default");
 
         _picked = true;
     }

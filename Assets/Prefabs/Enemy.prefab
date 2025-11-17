@@ -754,7 +754,13 @@ MonoBehaviour:
   _mask:
     serializedVersion: 2
     m_Bits: 384
+  mat: {fileID: 2100000, guid: fb71ede45bf1bb64881bc4d8682b03da, type: 2}
+  "colorDa\xF1o": {r: 1, g: 0, b: 0, a: 1}
+  param: _color2
   _transform: {fileID: 2722532360570458488}
+  _life: 7
+  _finalDoor: {fileID: 0}
+  _bloodParticles: {fileID: 0}
 --- !u!1 &2921797770954119022
 GameObject:
   m_ObjectHideFlags: 0

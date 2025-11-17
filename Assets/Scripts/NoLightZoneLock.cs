@@ -79,6 +79,7 @@ public class NoLightZoneLock : MonoBehaviour
             {
                 //_canvasMessage.SetActive(false);
                 DestroyBarrier();
+
             }
             else
             {
@@ -121,6 +122,7 @@ public class NoLightZoneLock : MonoBehaviour
 
     public void DestroyBarrier()
     {
+        fullscreenMaterial.SetFloat("_fxIntensity", 0);
         if (!_finalEnemy.activeSelf)
             _finalEnemy.SetActive(true);
 

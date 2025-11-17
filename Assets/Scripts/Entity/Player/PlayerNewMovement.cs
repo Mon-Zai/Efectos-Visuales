@@ -11,7 +11,7 @@ public class PlayerNewMovement : MonoBehaviour
     [Header("Basic Movement")]
     private Vector2 movementInput = Vector2.zero;
     [SerializeField] private float counterForce = 0.5f;
-    private float threshold = 0.01f;
+    private float threshold = 0f;
     private float currentSpeed;
     private float currentMax;
     [SerializeField] private float dirWallLenght;
