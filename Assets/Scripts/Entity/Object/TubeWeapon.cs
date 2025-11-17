@@ -15,7 +15,7 @@ public class TubeWeapon : MonoBehaviour, IInteractable
         transform.SetParent(attachTo.transform);
         transform.position = attachTo.transform.position;
         transform.rotation = attachTo.transform.rotation;
-        gameObject.layer = LayerMask.NameToLayer("Default");
+        
 
     }
 }
